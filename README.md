@@ -1,10 +1,12 @@
 # Simple Pokedex
 
 ## To use this Pokedex:
-1. Run the rails app (this app uses postgres)
-    a. rails db:create
-    b. rails db:migrate
-    c. rails s
+1. Run the rails app (this app uses postgres): 
+```
+rails db:create
+rails db:migrate
+rails s
+```
 
 2. Navigate to localhost:3000
 3. Click on "Register a new pokemon"
