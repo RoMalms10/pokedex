@@ -1,0 +1,34 @@
+<h1>Pokemon Information</h1>
+<%= link_to "search for another pokemon", "/" %>
+
+
+<h1><%= @pokemon.name.capitalize %></h1>
+<h2>Types</h2>
+<% types = JSON.parse(@pokemon.types) %>
+<% types.each_with_index do |type, index| %>
+    <% if index == types.length - 1 %>
+        <%= type %>
+    <% else %>
+        <%= type + " and" %>
+    <% end %>
+<% end %>
+
+<h2>Abilities</h2>
+<% abilities = JSON.parse(@pokemon.abilties) %>
+<% abilities.each_with_index do |ability, index| %>
+    <% if index == abilities.length - 1 %>
+        <%= ability %>
+    <% else %>
+        <%= ability + " or" %>
+    <% end %>
+<% end %>
+
+<h2>Moves</h2>
+<% moves = JSON.parse(@pokemon.moves) %>
+<% moves.each_with_index do |move, index| %>
+    <% if index == moves.length - 1 %>
+        <%= move %>
+    <% else %>
+        <%= move + "," %>
+    <% end %>
+<% end %>

@@ -1,0 +1,9 @@
+<h1>Enter in the Pokemon Name</h1>
+
+
+<h3>Search for a new Pokemon</h3>
+<%= form_with model: @pokemon do |form| %>
+  <%= form.text_field :name, placeholder: "name" %>
+
+  <%= form.submit "Register new discovery" %>
+<% end %>
